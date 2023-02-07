@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:08:51 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/05 15:10:12 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 10:05:10 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
 
-	if (size >= SIZE_MAX)
-		return (NULL);
 	p = malloc(count * size);
 	if (p == 0)
 		return (0);

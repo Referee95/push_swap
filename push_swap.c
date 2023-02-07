@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:20 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 09:05:56 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 12:28:50 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*join(int ac, char **av)
 	int		i;
 
 	str = malloc(ac - 1);
+	str[0] = '\0';
 	i = 0;
 	while (i < ac - 1)
 	{
@@ -48,6 +49,7 @@ t_list	*array_to_linklist(int *av, int n)
 		node = new_node;
 		i++;
 	}
+	free(av);
 	return (head);
 }
 
@@ -62,10 +64,11 @@ int	is_sorted(int *ptr, int l)
 			return (0);
 		i++;
 	}
+	free(ptr);
 	return (1);
 }
 
-int	*array_sort(int array[], int size)
+int	*array_sort(int *array, int size)
 {
 	int	i;
 	int	j;
@@ -89,7 +92,7 @@ int	*array_sort(int array[], int size)
 	return (array1);
 }
 
-void	lindex(t_list **node, int array[], int size)
+void	lindex(t_list **node, int *array, int size)
 {
 	t_list	*head;
 	int		j;
@@ -107,6 +110,7 @@ void	lindex(t_list **node, int array[], int size)
 		(head)->index = i;
 		i++;
 	}
+	free(array);
 }
 
 void	ft_free(char **arr)
@@ -128,24 +132,17 @@ int	main(int ac, char **av)
 	t_list *nodea;
 	t_list *nodeb;
 	nodeb = 0;
-	
 	errors(&av[1], ac);
 	s = join(ac, &av[1]);
 	str = ft_split(s, ' ');
+	free (s);
 	ac = nbr_arg(str);
 	ptr = convert(&str[0], ac);
 	fois_2(&ptr[0], ac);
 	if (is_sorted(ptr, ac) == 1)
-		exit(1);
+			exit(1);
 	ptrsort = array_sort(ptr, ac);
 	nodea = array_to_linklist(&ptr[0], ac);
 	lindex(&nodea, &ptrsort[0], ac);
 	case2_5(&nodea, &nodeb, ac);
-	free(ptr);
-	free(s);
-	free(ptrsort);
-	ft_free(str);
-	free_list(nodea);
-	free_list(nodeb);
-	while (1);
 }

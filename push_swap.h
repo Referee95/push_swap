@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:23 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/06 16:00:21 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:59:54 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void				postion(t_list *node);
 void				case_100(t_list **lista, t_list **listb, int size);
 void				trier_stack(t_list **lista, t_list **listb, int size);
 void				free_list(t_list *list);
+void				ft_free(char **arr);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:00:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/06 15:13:47 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 12:22:14 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	case_2(t_list **node, int i)
 {
-	if ((*node)->content > (*node)->next->content)
-		sa(&(*node));
+	sa(&(*node));
 }
 
 void	case_3(t_list **node, int i)

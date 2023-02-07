@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 15:27:40 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/06 16:15:59 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 12:25:39 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ void	case2_5(t_list **nodea, t_list **nodeb, int ac)
 		case_5(nodea, nodeb, ac);
 	else if (ac > 5)
 		case_100(nodea, nodeb, ac);
+	if(*nodea)		
+		free_list(*nodea);
+	if(*nodeb)
+		free_list(*nodeb);
+	
 }
 void free_list(t_list *list)
 {

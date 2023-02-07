@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 11:25:31 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 09:03:13 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 12:33:36 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ void	fois_2(int *av, int ac)
 		{
 			if (av[i] == av[j])
 			{
-				werror(1);
 				free(av);
+				werror(1);
 			}
 			j++;
 		}
@@ -50,7 +50,7 @@ void	error1(char **av)
 	int	j;
 
 	i = -1;
-	while (av[++i] != '\0')
+	while (av[++i])
 	{
 		j = -1;
 		while (av[i][++j] != '\0')
@@ -85,7 +85,7 @@ void	error2(char **av)
 	if (!av[i][j])
 		werror(1);
 	i = -1;
-	while (av[++i] != '\0')
+	while (av[++i])
 	{
 		j = -1;
 		k = 0;

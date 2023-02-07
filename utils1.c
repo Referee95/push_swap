@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:08:18 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/02 17:25:14 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:59:59 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,13 @@ int	*convert(char **str, int size)
 	int	j;
 
 	j = 0;
-	ptr = ft_calloc(size, sizeof(int));
+	ptr = malloc(size * sizeof(int));
 	while (str[j])
 	{
 		ptr[j] = ft_atoi(str[j]);
 		j++;
 	}
+	ft_free(str);
 	return (ptr);
 }
 
