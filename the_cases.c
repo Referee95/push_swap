@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:00:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 12:22:14 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:13:18 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,8 @@ void	trier_stack(t_list **lista, t_list **listb, int size)
 
 void	case_100(t_list **lista, t_list **listb, int size)
 {
-	int		i;
-	int		range;
+	int	i;
+	int	range;
 
 	i = 0;
 	range = 15;

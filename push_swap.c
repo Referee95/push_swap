@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:20 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 12:28:50 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 19:08:40 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,21 +51,6 @@ t_list	*array_to_linklist(int *av, int n)
 	}
 	free(av);
 	return (head);
-}
-
-int	is_sorted(int *ptr, int l)
-{
-	int	i;
-
-	i = 0;
-	while (i < l - 1)
-	{
-		if (ptr[i] > ptr[i + 1])
-			return (0);
-		i++;
-	}
-	free(ptr);
-	return (1);
 }
 
 int	*array_sort(int *array, int size)
@@ -113,36 +98,24 @@ void	lindex(t_list **node, int *array, int size)
 	free(array);
 }
 
-void	ft_free(char **arr)
-{
-	int i;
-
-	i = -1;
-	while(arr[++i])
-		free(arr[i]);
-	free(arr);
-}
-
 int	main(int ac, char **av)
 {
-	char **str;
-	int *ptr;
-	int *ptrsort;
-	char *s;
-	t_list *nodea;
-	t_list *nodeb;
+	struct s_main	x;
+	t_list			*nodea;
+	t_list			*nodeb;
+
 	nodeb = 0;
-	errors(&av[1], ac);
-	s = join(ac, &av[1]);
-	str = ft_split(s, ' ');
-	free (s);
-	ac = nbr_arg(str);
-	ptr = convert(&str[0], ac);
-	fois_2(&ptr[0], ac);
-	if (is_sorted(ptr, ac) == 1)
-			exit(1);
-	ptrsort = array_sort(ptr, ac);
-	nodea = array_to_linklist(&ptr[0], ac);
-	lindex(&nodea, &ptrsort[0], ac);
+	errors(av, ac);
+	x.s = join(ac, &av[1]);
+	x.str = ft_split(x.s, ' ');
+	free(x.s);
+	ac = nbr_arg(x.str);
+	x.ptr = convert(&x.str[0], ac);
+	fois_2(&x.ptr[0], ac);
+	if (is_sorted(x.ptr, ac) == 1)
+		exit(0);
+	x.ptrsort = array_sort(x.ptr, ac);
+	nodea = array_to_linklist(&x.ptr[0], ac);
+	lindex(&nodea, &x.ptrsort[0], ac);
 	case2_5(&nodea, &nodeb, ac);
 }

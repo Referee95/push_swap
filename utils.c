@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 08:49:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 09:56:38 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:50:48 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,19 @@ char	*ft_strjoin(char *str, char *str1)
 	src[i] = '\0';
 	free(str);
 	return (src);
+}
+
+int	is_sorted(int *ptr, int l)
+{
+	int	i;
+
+	i = 0;
+	while (i < l - 1)
+	{
+		if (ptr[i] > ptr[i + 1])
+			return (0);
+		i++;
+	}
+	free(ptr);
+	return (1);
 }

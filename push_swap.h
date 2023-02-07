@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:23 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 11:59:54 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:21:33 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,13 @@ typedef struct s_list
 	struct s_list	*next;
 
 }					t_list;
-
+struct s_main
+{
+	char	**str;
+	int		*ptr;
+	int		*ptrsort;
+	char	*s;
+};
 void				ft_bzero(void *s, size_t n);
 t_list				*ft_lstnew(int cn);
 void				*ft_memset(void *b, int c, size_t len);
@@ -59,6 +65,7 @@ void				werror(int l);
 void				fois_2(int *av, int ac);
 void				error1(char **av);
 void				error2(char **av);
+void				error3(char	**av);
 void				errors(char **av, int ac);
 int					*convert(char **str, int size);
 int					nbr_arg(char **str);
@@ -69,5 +76,5 @@ void				case_100(t_list **lista, t_list **listb, int size);
 void				trier_stack(t_list **lista, t_list **listb, int size);
 void				free_list(t_list *list);
 void				ft_free(char **arr);
-
+int					is_sorted(int *ptr, int l);
 #endif
