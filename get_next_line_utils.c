@@ -1,45 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 08:49:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 08:15:38 by ykhalil-         ###   ########.fr       */
+/*   Created: 2022/12/07 10:00:38 by ykhalil-          #+#    #+#             */
+/*   Updated: 2023/02/08 09:50:37 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_etc(char *line)
 {
-	ft_memset(s, 0, n);
-}
+	char	*str;
+	int		i;
+	int		j;
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	unsigned char	*str;
-	size_t			i;
-
-	str = (unsigned char *)b;
-	i = 0;
-	while (i < len)
+	i = ft_strnlen(line) - 1;
+	j = 0;
+	while (line[++i])
+		j++;
+	if (!j)
 	{
-		str[i] = (char)c;
-		i++;
+		free(line);
+		return (0);
 	}
+	str = malloc(j + 1);
+	if (!str)
+		return (0);
+	i = i - j;
+	j = 0;
+	while (line[i])
+		str[j++] = line[i++];
+	str[j] = '\0';
+	free(line);
 	return (str);
 }
 
-int	ft_strlen(char *line)
+char	*problem(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (line[i])
-		i++;
-	return (i);
+	str = malloc(1);
+	str[0] = '\0';
+	return (str);
 }
 
 char	*ft_strjoin(char *str, char *str1)
@@ -50,6 +54,8 @@ char	*ft_strjoin(char *str, char *str1)
 
 	i = -1;
 	j = 0;
+	if (!str)
+		str = problem(str);
 	src = malloc(ft_strlen(str) + ft_strlen(str1) + 1);
 	if (!src)
 		return (0);
@@ -67,19 +73,4 @@ char	*ft_strjoin(char *str, char *str1)
 	src[i] = '\0';
 	free(str);
 	return (src);
-}
-
-int	is_sorted(long long *ptr, int l)
-{
-	int	i;
-
-	i = 0;
-	while (i < l - 1)
-	{
-		if (ptr[i] > ptr[i + 1])
-			return (0);
-		i++;
-	}
-	free(ptr);
-	return (1);
 }

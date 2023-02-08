@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 11:25:31 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 19:13:08 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/08 08:37:05 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	werror(int l)
 	}
 }
 
-void	fois_2(int *av, int ac)
+void	fois_2(long long *av, int ac)
 {
 	int	i;
 	int	j;

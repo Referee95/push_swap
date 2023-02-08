@@ -6,17 +6,17 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:08:18 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 19:14:08 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/08 08:38:47 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
-	int	n;
-	int	i;
-	int	s;
+	long long	n;
+	int			i;
+	int			s;
 
 	n = 0;
 	i = 0;
@@ -37,13 +37,13 @@ int	ft_atoi(const char *str)
 	return (n * s);
 }
 
-int	*convert(char **str, int size)
+long long	*convert(char **str, int size)
 {
-	int	*ptr;
-	int	j;
+	long long	*ptr;
+	int			j;
 
 	j = 0;
-	ptr = malloc(size * sizeof(int));
+	ptr = malloc(size * sizeof(long long));
 	while (str[j])
 	{
 		ptr[j] = ft_atoi(str[j]);

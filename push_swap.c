@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:20 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 19:13:29 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/08 08:38:14 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*join(int ac, char **av)
 	return (str);
 }
 
-t_list	*array_to_linklist(int *av, int n)
+t_list	*array_to_linklist(long long *av, int n)
 {
 	t_list	*head;
 	t_list	*node;
@@ -53,7 +53,7 @@ t_list	*array_to_linklist(int *av, int n)
 	return (head);
 }
 
-int	*array_sort(int *array, int size)
+int	*array_sort(long long *array, int size)
 {
 	int	i;
 	int	j;
@@ -111,7 +111,8 @@ int	main(int ac, char **av)
 	free(x.s);
 	ac = nbr_arg(x.str);
 	x.ptr = convert(&x.str[0], ac);
-	fois_2(&x.ptr[0], ac);
+	min_max(x.ptr, ac);
+	fois_2(x.ptr, ac);
 	if (is_sorted(x.ptr, ac) == 1)
 		exit(0);
 	x.ptrsort = array_sort(x.ptr, ac);
