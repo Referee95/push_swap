@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:23 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 09:56:03 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:19:33 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ struct s_main
 };
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 1
 # endif
 
 char				*ft_line(char *line);
 int					ft_strnlen(char *line);
 char				*ft_etc(char *line);
-char				*ft_strjoin(char *str, char *str1);
+char				*ft_strjoin2(char *str, char *str1);
 char				*get_next_line(int fd);
 char				*problem(char *str);
 char				*line_readed(int fd, char *etc);
@@ -92,4 +92,6 @@ void				ft_free(char **arr);
 int					is_sorted(long long *ptr, int l);
 t_list				*array_to_linklist(long long *av, int n);
 void				min_max(long long *ptr, int size);
+char				*join(int ac, char **av);
+int					newline(char *line);
 #endif

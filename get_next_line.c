@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 10:01:49 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 09:50:52 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:45:02 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	newline(char *line)
 	i = 0;
 	if (!line)
 		return (1);
-	while (line[i] != '\0' && line[i])
+	while (line[i])
 	{
 		if (line[i] == '\n')
 			return (0);
