@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 08:34:00 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 08:40:04 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:31:31 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,54 @@ void	min_max(long long *ptr, int size)
 		}
 		i++;
 	}
+}
+
+int	newline(char *line)
+{
+	int	i;
+
+	i = 0;
+	if (!line)
+		return (1);
+	while (line[i])
+	{
+		if (line[i] == '\n')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+char	*problem(char *str)
+{
+	str = malloc(1);
+	str[0] = '\0';
+	return (str);
+}
+
+char	*ft_strjoin2(char *str, char *str1)
+{
+	int		i;
+	int		j;
+	char	*src;
+
+	i = -1;
+	j = 0;
+	if (!str)
+		str = problem(str);
+	src = malloc(ft_strlen(str) + ft_strlen(str1) + 1);
+	if (!src)
+		return (0);
+	while (str[++i] != '\0')
+		src[i] = str[i];
+	while (str1[j] != '\0')
+		src[i++] = str1[j++];
+	src[i] = '\0';
+	// if (i == 0)
+	// {
+	// 	free(src);
+	// 	free(str);
+	// 	return (0);
+	// }
+	free(str);
+	return (src);
 }

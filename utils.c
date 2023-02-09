@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 08:49:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 11:59:35 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 16:28:00 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	ft_strlen(char *line)
 	int	i;
 
 	i = 0;
+	if (!line)
+		return (0);
 	while (line[i])
 		i++;
 	return (i);

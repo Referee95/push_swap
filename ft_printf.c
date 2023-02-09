@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:35:09 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 19:13:15 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:52:57 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ int	ft_printf(const char *s, ...)
 
 void	errors(char **av, int ac)
 {
-	if (ac == 1)
+	if (ac == 2 || ac == 1)
 		exit(0);
 	error3(&av[1]);
 	error2(&av[1]);
