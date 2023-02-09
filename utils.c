@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 08:49:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 16:28:00 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:24:03 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,5 @@ int	check_stack(t_list *list)
 	free_list(list);
 	return(1);
 }
+
 

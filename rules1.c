@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 12:16:55 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 12:24:34 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 18:16:59 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	sa(t_list **nodea, int i)
 	t_list	*t;
 	t_list	*s;
 
-	if (!*nodea)
+	if (!*nodea || !(*nodea)->next)
 		return ;
 	s = *nodea;
 	(*nodea) = (*nodea)->next;
@@ -33,7 +33,7 @@ void	sb(t_list **nodeb, int i)
 	t_list	*t;
 	t_list	*s;
 
-	if (!*nodeb)
+	if (!*nodeb || !(*nodeb)->next)
 		return ;
 	s = *nodeb;
 	(*nodeb) = (*nodeb)->next;
