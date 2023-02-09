@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:20 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 16:22:45 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 11:41:07 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,9 +100,9 @@ void	lindex(t_list **node, int *array, int size)
 
 // int	main(int ac, char **av)
 // {
-// 	struct s_main	x;
-// 	t_list			*nodea;
-// 	t_list			*nodeb;
+// 	struct s_main x;
+// 	t_list *nodea;
+// 	t_list *nodeb;
 
 // 	nodeb = 0;
 // 	errors(av, ac);
@@ -115,18 +115,13 @@ void	lindex(t_list **node, int *array, int size)
 // 	fois_2(x.ptr, ac);
 // 	if (is_sorted(x.ptr, ac) == 1)
 // 		exit(0);
-// 	x.ptrsort = array_sort(x.ptr, ac);
-	// nodea = array_to_linklist(&x.ptr[0], ac);
-	// lindex(&nodea, &x.ptrsort[0], ac);
-	// case2_5(&nodea, &nodeb, ac);
+// 	x.ptrsort = array_sort(&x.ptr[0], ac);
+// 	nodea = array_to_linklist(&x.ptr[0], ac);
+// 	lindex(&nodea, &x.ptrsort[0], ac);
+// 	//     while(nodea)
+//     // {
+//     //     ft_printf("=>%d\n",nodea->index);
+//     //     nodea = nodea->next;
+//     // }
+// 	case2_5(&nodea, &nodeb, ac);
 // }
-//  int i = 1;
-//     s1 = malloc(20);
-//     s1[0] = '\0';
-//     s2 = 0;
-//     while(i > 0 && newline(s2))
-//     {
-//         i = read(0, s1, 1);
-//         s2 = ft_strjoin2(s2, s1);
-//     }
-//     printf("%s", s2);

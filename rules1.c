@@ -6,49 +6,58 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 12:16:55 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 19:13:47 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:24:34 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_list **nodea)
+void	sa(t_list **nodea, int i)
 {
 	t_list	*t;
 	t_list	*s;
 
+	if (!*nodea)
+		return ;
 	s = *nodea;
 	(*nodea) = (*nodea)->next;
 	t = (*nodea)->next;
 	(*nodea)->next = s;
 	s->next = t;
-	ft_printf("sa\n");
+	if(i)
+		ft_printf("sa\n");
 }
 
-void	sb(t_list **nodeb)
+void	sb(t_list **nodeb, int i)
 {
 	t_list	*t;
 	t_list	*s;
 
+	if (!*nodeb)
+		return ;
 	s = *nodeb;
 	(*nodeb) = (*nodeb)->next;
 	t = (*nodeb)->next;
 	(*nodeb)->next = s;
 	s->next = t;
-	ft_printf("sb\n");
+	if(i)
+		ft_printf("sb\n");
 }
 
-void	ss(t_list **nodea, t_list **nodeb)
+void	ss(t_list **nodea, t_list **nodeb, int i)
 {
-	sa(nodea);
-	sb(nodeb);
-	ft_printf("ss\n");
+	sa(nodea, i);
+	sb(nodeb, i);
+	if(i)
+		ft_printf("ss\n");
 }
 
-void	pa(t_list **lst, t_list **node)
+void	pa(t_list **lst, t_list **node, int i)
 {
 	t_list	*t;
 
+	if (!*node)
+		return ;
 	if (*node)
 		t = *lst;
 	else
@@ -56,16 +65,20 @@ void	pa(t_list **lst, t_list **node)
 	*lst = *node;
 	*node = (*node)->next;
 	(*lst)->next = t;
-	ft_printf("pa\n");
+	if(i)
+		ft_printf("pa\n");
 }
 
-void	pb(t_list **lst, t_list **node)
+void	pb(t_list **lst, t_list **node, int i)
 {
 	t_list	*t;
-
+	
+	if (!*lst)
+		return ;
 	t = *node;
 	*node = *lst;
 	*lst = (*lst)->next;
 	(*node)->next = t;
-	ft_printf("pb\n");
+	if(i)
+		ft_printf("pb\n");
 }

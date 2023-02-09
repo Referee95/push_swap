@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:23 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 16:19:33 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:18:44 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,17 @@ void				*ft_memset(void *b, int c, size_t len);
 char				*ft_strjoin(char *str, char *str1);
 int					ft_strlen(char *line);
 void				*ft_calloc(size_t count, size_t size);
-void				sa(t_list **nodea);
-void				sb(t_list **nodeb);
-void				ss(t_list **nodea, t_list **nodeb);
-void				pa(t_list **lst, t_list **node);
-void				pb(t_list **lst, t_list **node);
-void				ra(t_list **nodea);
-void				rb(t_list **nodeb);
-void				rr(t_list **nodea, t_list **nodeb);
-void				rra(t_list **nodea);
-void				rrb(t_list **nodeb);
-void				rrr(t_list **nodea, t_list **nodeb);
+void				sa(t_list **nodea, int i);
+void				sb(t_list **nodeb, int i);
+void				ss(t_list **nodea, t_list **nodeb, int i);
+void				pa(t_list **lst, t_list **node, int i);
+void				pb(t_list **lst, t_list **node, int i);
+void				ra(t_list **nodea, int i);
+void				rb(t_list **nodeb, int i);
+void				rr(t_list **nodea, t_list **nodeb, int i);
+void				rra(t_list **nodea, int i);
+void				rrb(t_list **nodeb, int i);
+void				rrr(t_list **nodea, t_list **nodeb, int i);
 char				**ft_split(char const *s, char c);
 long long			ft_atoi(const char *str);
 int					ft_putchar(char c);
@@ -94,4 +94,6 @@ t_list				*array_to_linklist(long long *av, int n);
 void				min_max(long long *ptr, int size);
 char				*join(int ac, char **av);
 int					newline(char *line);
+int					*array_sort(long long *array, int size);
+int					check_stack(t_list *list);
 #endif

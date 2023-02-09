@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 15:08:18 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/08 18:47:05 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:24:53 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,10 @@ void	postion(t_list *node)
 	}
 }
 
-void	rrr(t_list **nodea, t_list **nodeb)
+void	rrr(t_list **nodea, t_list **nodeb, int i)
 {
-	rra(nodea);
-	rrb(nodeb);
-	ft_printf("rrr\n");
+	rra(nodea, 1);
+	rrb(nodeb, 1);
+	if(i)
+		ft_printf("rrr\n");
 }

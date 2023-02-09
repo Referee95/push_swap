@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:00:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/07 19:13:58 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 12:22:08 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	case_2(t_list **node, int i)
 {
-	sa(&(*node));
+	sa(node, 1);
 }
 
 void	case_3(t_list **node, int i)
@@ -26,23 +26,23 @@ void	case_3(t_list **node, int i)
 	l = (*node)->next->next;
 	if ((*node)->content > s->content && s->content < l->content
 		&& l->content > (*node)->content)
-		sa(&(*node));
+		sa(node, 1);
 	else if ((*node)->content > s->content && s->content > l->content)
 	{
-		sa(&(*node));
-		rra(&(*node));
+		sa(node, 1);
+		rra(node, 1);
 	}
 	else if ((*node)->content > s->content && (*node)->content > l->content
 		&& s->content < l->content)
-		ra(&(*node));
+		ra(node, 1);
 	else if ((*node)->content < s->content && (*node)->content < l->content
 		&& s->content > l->content)
 	{
-		sa(&(*node));
-		ra(&(*node));
+		sa(node, 1);
+		ra(node, 1);
 	}
 	else if (!((*node)->content < s->content && s->content < l->content))
-		rra(&(*node));
+		rra(node, 1);
 }
 
 void	case_5(t_list **lista, t_list **listb, int size)
@@ -58,19 +58,19 @@ void	case_5(t_list **lista, t_list **listb, int size)
 		while (head->next)
 			head = head->next;
 		if (head->index == i)
-			rra(lista);
+			rra(lista, 1);
 		else
 		{
 			while ((*lista)->index != i)
-				ra(lista);
+				ra(lista, 1);
 		}
-		pb(lista, listb);
+		pb(lista, listb, 1);
 		i++;
 		size--;
 	}
 	case_3(lista, size);
 	while (*listb)
-		pa(lista, listb);
+		pa(lista, listb, 1);
 }
 
 void	trier_stack(t_list **lista, t_list **listb, int size)
@@ -87,18 +87,19 @@ void	trier_stack(t_list **lista, t_list **listb, int size)
 		if (head->postion <= size / 2)
 		{
 			while ((*listb)->index != size)
-				rb(listb);
+				rb(listb, 1);
 		}
 		else if (head->postion > size / 2)
 		{
 			while ((*listb)->index != size)
-				rrb(listb);
+				rrb(listb, 1);
 		}
-		pa(lista, listb);
+		pa(lista, listb, 1);
 		size--;
 	}
 }
 
+#include <stdio.h>
 void	case_100(t_list **lista, t_list **listb, int size)
 {
 	int	i;
@@ -112,17 +113,18 @@ void	case_100(t_list **lista, t_list **listb, int size)
 	{
 		if ((*lista)->index <= i && i > 0)
 		{
-			pb(lista, listb);
-			rb(listb);
+			pb(lista, listb, 1);
+			rb(listb, 1);
 			i++;
 		}
 		else if ((*lista)->index <= range + i)
 		{
-			pb(lista, listb);
+			pb(lista, listb, 1);
 			i++;
 		}
 		else
-			ra(lista);
+			ra(lista, 1);
+		
 	}
 	trier_stack(lista, listb, size);
 }
