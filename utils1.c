@@ -83,6 +83,6 @@ void	rrr(t_list **nodea, t_list **nodeb, int i)
 {
 	rra(nodea, 1);
 	rrb(nodeb, 1);
-	if(i)
+	if (i)
 		ft_printf("rrr\n");
 }

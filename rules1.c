@@ -24,7 +24,7 @@ void	sa(t_list **nodea, int i)
 	t = (*nodea)->next;
 	(*nodea)->next = s;
 	s->next = t;
-	if(i)
+	if (i)
 		ft_printf("sa\n");
 }
 
@@ -40,7 +40,7 @@ void	sb(t_list **nodeb, int i)
 	t = (*nodeb)->next;
 	(*nodeb)->next = s;
 	s->next = t;
-	if(i)
+	if (i)
 		ft_printf("sb\n");
 }
 
@@ -48,7 +48,7 @@ void	ss(t_list **nodea, t_list **nodeb, int i)
 {
 	sa(nodea, i);
 	sb(nodeb, i);
-	if(i)
+	if (i)
 		ft_printf("ss\n");
 }
 
@@ -65,20 +65,20 @@ void	pa(t_list **lst, t_list **node, int i)
 	*lst = *node;
 	*node = (*node)->next;
 	(*lst)->next = t;
-	if(i)
+	if (i)
 		ft_printf("pa\n");
 }
 
 void	pb(t_list **lst, t_list **node, int i)
 {
 	t_list	*t;
-	
+
 	if (!*lst)
 		return ;
 	t = *node;
 	*node = *lst;
 	*lst = (*lst)->next;
 	(*node)->next = t;
-	if(i)
+	if (i)
 		ft_printf("pb\n");
 }

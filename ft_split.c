@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:08:51 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 15:57:54 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:45:27 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,5 @@ char	**ft_split(char const *s, char c)
 			i = i + w_len((char *)&s[i], c);
 		}
 	}
-	// free((char *)s);
 	return (str);
 }

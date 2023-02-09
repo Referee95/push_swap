@@ -28,7 +28,7 @@ void	ra(t_list **nodea, int i)
 	t = *head;
 	*head = (*head)->next;
 	t->next = NULL;
-	if(i)
+	if (i)
 		ft_printf("ra\n");
 }
 
@@ -48,7 +48,7 @@ void	rb(t_list **nodeb, int i)
 	t = *head;
 	*head = (*head)->next;
 	t->next = NULL;
-	if(i)
+	if (i)
 		ft_printf("rb\n");
 }
 
@@ -56,7 +56,7 @@ void	rr(t_list **nodea, t_list **nodeb, int i)
 {
 	ra(nodea, i);
 	rb(nodeb, i);
-	if(i)
+	if (i)
 		ft_printf("rr\n");
 }
 
@@ -76,7 +76,7 @@ void	rra(t_list **nodea, int i)
 	s->next = *nodea;
 	t->next = NULL;
 	*nodea = s;
-	if(i)
+	if (i)
 		ft_printf("rra\n");
 }
 
@@ -96,6 +96,6 @@ void	rrb(t_list **nodeb, int i)
 	s->next = *nodeb;
 	t->next = NULL;
 	*nodeb = s;
-	if(i)
+	if (i)
 		ft_printf("rrb\n");
 }

@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:00:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 12:22:08 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:49:05 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ void	trier_stack(t_list **lista, t_list **listb, int size)
 	}
 }
 
-#include <stdio.h>
 void	case_100(t_list **lista, t_list **listb, int size)
 {
 	int	i;
@@ -124,7 +123,6 @@ void	case_100(t_list **lista, t_list **listb, int size)
 		}
 		else
 			ra(lista, 1);
-		
 	}
 	trier_stack(lista, listb, size);
 }

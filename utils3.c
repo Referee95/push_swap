@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 08:34:00 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 17:31:31 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 19:51:26 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int	newline(char *line)
 	}
 	return (1);
 }
+
 char	*problem(char *str)
 {
 	str = malloc(1);
@@ -73,12 +74,15 @@ char	*ft_strjoin2(char *str, char *str1)
 	while (str1[j] != '\0')
 		src[i++] = str1[j++];
 	src[i] = '\0';
-	// if (i == 0)
-	// {
-	// 	free(src);
-	// 	free(str);
-	// 	return (0);
-	// }
 	free(str);
 	return (src);
+}
+
+void	free_ft(t_list *nodea, t_list *nodeb, int *ptr, t_main *x)
+{
+	if (nodeb)
+		free_list(nodeb);
+	free_list(nodea);
+	free(x->ptrsort);
+	free(x);
 }
