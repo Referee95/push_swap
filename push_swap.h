@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 10:53:23 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 20:08:32 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:19:07 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@ int					ft_putnbr(long int n);
 int					ft_putstr(char *s);
 int					ft_putunsigned(unsigned int n);
 int					ft_printf(const char *s, ...);
-void				case_2(t_list **node, int i);
-void				case_3(t_list **node, int i);
+void				case_2(t_list **node);
+void				case_3(t_list **node);
 void				case_5(t_list **lista, t_list **listb, int i);
 void				lindex(t_list **node, int array[], int size);
 void				werror(int l);
@@ -71,7 +71,7 @@ void				fois_2(long long *av, int ac);
 void				error1(char **av);
 void				error2(char **av);
 void				error3(char **av);
-void				errors(char **av, int ac);
+void				errors(char **av);
 long long			*convert(char **str, int size);
 int					nbr_arg(char **str);
 void				case2_5(t_list **nodea, t_list **nodeb, int ac);
@@ -88,11 +88,13 @@ char				*join(int ac, char **av);
 int					newline(char *line);
 int					*array_sort(long long *array, int size);
 int					check_stack(t_list *list, t_list *listb);
-void				check_stack2(t_list *list, int i);
-void				free_ft(t_list *nodea, t_list *nodeb, int *ptr, t_main *x);
-void				norminette(char *s1, t_list **nodea, t_list **nodeb);
+void				check_stack2(int i);
+void				free_ft(t_list *nodea, t_list *nodeb, int *ptr);
+void				norminette(char *s1, t_list **nodea, t_list **nodeb,
+						int *ptr);
 char				*read_line(void);
 void				algo(char *str, t_list **nodea, t_list **nodeb);
-void				check_error(char *s1);
+void				check_error(char *s1, t_list **nodea, t_list **nodeb,
+						int *ptr);
 int					ft_strcmp(char *s1, char *s2);
 #endif

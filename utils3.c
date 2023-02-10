@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 08:34:00 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 19:51:26 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:23:26 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,10 @@ char	*ft_strjoin2(char *str, char *str1)
 	return (src);
 }
 
-void	free_ft(t_list *nodea, t_list *nodeb, int *ptr, t_main *x)
+void	free_ft(t_list *nodea, t_list *nodeb, int *ptr)
 {
 	if (nodeb)
 		free_list(nodeb);
 	free_list(nodea);
-	free(x->ptrsort);
-	free(x);
+	free(ptr);
 }

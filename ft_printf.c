@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:35:09 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 17:52:57 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/10 18:22:10 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,11 @@ int	ft_printf(const char *s, ...)
 	return (y);
 }
 
-void	errors(char **av, int ac)
+void	errors(char **av)
 {
-	if (ac == 2 || ac == 1)
-		exit(0);
+	if (av[1][0] == '\0')
+		werror(1);
 	error3(&av[1]);
 	error2(&av[1]);
 	error1(&av[1]);
-	if (av[1][0] == '\0')
-		werror(1);
 }

@@ -6,7 +6,7 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 15:27:40 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 17:39:04 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 22:34:49 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ void	ft_swap(int *a, int *b)
 void	case2_5(t_list **nodea, t_list **nodeb, int ac)
 {
 	if (ac == 2)
-		case_2(nodea, ac);
+		case_2(nodea);
 	else if (ac == 3)
-		case_3(nodea, ac);
+		case_3(nodea);
 	else if (ac > 3 && ac < 6)
 		case_5(nodea, nodeb, ac);
 	else if (ac > 5)

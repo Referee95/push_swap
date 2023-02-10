@@ -6,16 +6,16 @@
 #    By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 18:45:58 by ykhalil-          #+#    #+#              #
-#    Updated: 2023/02/09 22:16:25 by ykhalil-         ###   ########.fr        #
+#    Updated: 2023/02/10 12:16:06 by ykhalil-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PRG			= push_swap.c 
+PRG	= push_swap.c 
 
-SRCS 		= $(PRG:.c=.o)
+SRCS = $(PRG:.c=.o)
 
-SRC        =   error.c ft_printf.c ft_split.c ft_printf2.c rules1.c rules2.c \
-				the_cases.c utils.c utils1.c utils2.c utils3.c utils4.c
+SRC	=	error.c ft_printf.c ft_split.c ft_printf2.c rules1.c rules2.c the_cases.c \
+		utils.c utils1.c utils2.c utils3.c utils4.c utils5.c
 		
 BPRG		= checker.c			
 BSRCS 		= $(BPRG:.c=.o)
@@ -31,16 +31,16 @@ CFLAGS 		= -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME) :$(SRCS) $(BSRC)
-			cc $(CFLAGS) -c $^ -o ${NAME}
+			cc $(CFLAGS) $^ -o $(NAME)
 			
 bonus : $(CHECKER)
 
 $(CHECKER): $(BSRCS) $(BSRC)
 			cc $(CFLAGS) $^ -o checker
 
-clean:
+clean :
 	@rm -f *.o
-fclean:		
+fclean :		
 	@rm -f *.o $(NAME) $(CHECKER)
-re:		fclean all
+re : fclean all
 .PHONE : all clean fclean re bonus

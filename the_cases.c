@@ -6,18 +6,18 @@
 /*   By: ykhalil- <ykhalil-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 10:00:39 by ykhalil-          #+#    #+#             */
-/*   Updated: 2023/02/09 19:49:05 by ykhalil-         ###   ########.fr       */
+/*   Updated: 2023/02/09 22:35:19 by ykhalil-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	case_2(t_list **node, int i)
+void	case_2(t_list **node)
 {
 	sa(node, 1);
 }
 
-void	case_3(t_list **node, int i)
+void	case_3(t_list **node)
 {
 	t_list	*s;
 	t_list	*l;
@@ -68,7 +68,7 @@ void	case_5(t_list **lista, t_list **listb, int size)
 		i++;
 		size--;
 	}
-	case_3(lista, size);
+	case_3(lista);
 	while (*listb)
 		pa(lista, listb, 1);
 }
