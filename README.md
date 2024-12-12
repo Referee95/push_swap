@@ -9,8 +9,7 @@
 2. [Rules](#rules)
 3. [Project](#the-project)
 4. [Pseudo Code](#psuedo-code)
-5. [Visualizer](#visualizer)
-6. [Resources](#resources)
+5. [Resources](#resources)
 
 ## About
 
@@ -87,10 +86,6 @@ In no way can it quit in an unexpected manner (segmentation fault, bus error, do
 <img src="./images/final.png">
 
 </br>
-
-## Visualizer
-
-<img src="./images/push_swap_visualizer.gif">
 
 </br>
 
